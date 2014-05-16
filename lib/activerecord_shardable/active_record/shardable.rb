@@ -31,8 +31,17 @@ module ActiveRecord
 
     def set_bigint_primary_key(table_name, shard_id)
       execute <<-EOD
-          ALTER TABLE topics ADD CONSTRAINT #{table_name}_pkey PRIMARY KEY(id);
-          ALTER TABLE topics ALTER COLUMN id SET DEFAULT next_id('#{table_name}_id_seq'::regclass, #{shard_id});
+        CREATE SEQUENCE #{table_name}_id_seq
+          INCREMENT 1
+          MINVALUE 1
+          MAXVALUE 9223372036854775807
+          START 1
+          CACHE 1;
+        ALTER TABLE #{table_name}_id_seq
+          OWNER TO #{database_configuration['username']};
+
+        ALTER TABLE topics ADD CONSTRAINT #{table_name}_pkey PRIMARY KEY(id);
+        ALTER TABLE topics ALTER COLUMN id SET DEFAULT next_id('#{table_name}_id_seq'::regclass, #{shard_id});
       EOD
     end
 
