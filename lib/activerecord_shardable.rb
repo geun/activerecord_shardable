@@ -1,3 +1,3 @@
 require "activerecord_shardable/version"
-require 'activerecord_shardable/active_record'
+require 'activerecord_shardable/active_record/shardable'
 
