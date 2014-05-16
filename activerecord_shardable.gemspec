@@ -5,7 +5,7 @@ require 'activerecord_shardable/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "activerecord-shardable"
-  spec.version       = ActiveRecord::Shardable::VERSION
+  spec.version       = ActiverecordShardable::VERSION
   spec.authors       = ["geun"]
   spec.email         = ["geun@touchingsignal.com"]
   spec.description   = %q{Migration heler to make shardable table for active record }

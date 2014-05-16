@@ -40,8 +40,8 @@ module ActiveRecord
         ALTER TABLE #{table_name}_id_seq
           OWNER TO #{database_configuration['username']};
 
-        ALTER TABLE topics ADD CONSTRAINT #{table_name}_pkey PRIMARY KEY(id);
-        ALTER TABLE topics ALTER COLUMN id SET DEFAULT next_id('#{table_name}_id_seq'::regclass, #{shard_id});
+        ALTER TABLE #{table_name} ADD CONSTRAINT #{table_name}_pkey PRIMARY KEY(id);
+        ALTER TABLE #{table_name} ALTER COLUMN id SET DEFAULT next_id('#{table_name}_id_seq'::regclass, #{shard_id});
       EOD
     end
 

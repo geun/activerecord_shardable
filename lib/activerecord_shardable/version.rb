@@ -1,5 +1,4 @@
-module ActiveRecord
-  module Shardable
+module ActiverecordShardable
     VERSION = "0.0.1"
   end
 end
