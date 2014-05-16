@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = ActiveRecord::Shardable::VERSION
   spec.authors       = ["geun"]
   spec.email         = ["geun@touchingsignal.com"]
-  spec.description   = %q{Migration heler to make shardable table}
-  spec.summary       = spec.description
-  spec.homepage      = ""
+  spec.description   = %q{Migration heler to make shardable table for active record }
+  spec.summary       = %q{Migration heler to make shardable table}
+  spec.homepage      = "https://github.com/geun/activerecord_shardable"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
