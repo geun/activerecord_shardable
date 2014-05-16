@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb77e8fa-45f8-40ab-b3c2-84404832d4da" name="Default" comment="add .idea to gitignore">
+    <list default="true" id="bb77e8fa-45f8-40ab-b3c2-84404832d4da" name="Default" comment="remove idea folder">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/activerecord_shardable.iml" afterPath="" />
@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3639266" vertical-offset="0" max-vertical-offset="1253">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -290,7 +290,11 @@
       <created>1400238085654</created>
       <updated>1400238085654</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="remove idea folder">
+      <created>1400238317912</created>
+      <updated>1400238317912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -335,7 +339,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="add .idea to gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add .idea to gitignore" />
+    <MESSAGE value="remove idea folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove idea folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -424,7 +429,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3639266" vertical-offset="0" max-vertical-offset="1253">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
