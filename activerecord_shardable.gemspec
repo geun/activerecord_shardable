@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'activerecord_shardable/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "activerecord_shardable"
+  spec.name          = "activerecord-shardable"
   spec.version       = ActiverecordShardable::VERSION
   spec.authors       = ["geun"]
   spec.email         = ["geun@touchingsignal.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Migration heler to make shardable table }
+  spec.description   = %q{Migration heler to make shardable table}
   spec.homepage      = ""
   spec.license       = "MIT"
 
