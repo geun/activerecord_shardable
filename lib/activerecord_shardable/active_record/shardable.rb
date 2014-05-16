@@ -6,7 +6,7 @@ module ActiveRecord
 
     def create_shardable_table(table_name, schema_name = 'public', shard_id = 1)
       create_next_id_function(schema_name)
-      create_shard_seq(table_name, shard_id)
+      set_bigint_primary_key(table_name, shard_id)
     end
 
     def create_next_id_function(schema_name)
@@ -29,19 +29,10 @@ module ActiveRecord
       EOD
     end
 
-    def create_shard_seq(table_name, shard_id)
+    def set_bigint_primary_key(table_name, shard_id)
       execute <<-EOD
-        CREATE SEQUENCE topics_id_seq
-          INCREMENT 1
-          MINVALUE 1
-          MAXVALUE 9223372036854775807
-          START 1
-          CACHE 1;
-        ALTER TABLE #{table_name}_id_seq
-          OWNER TO #{database_configuration['username']};
-
           ALTER TABLE topics ADD CONSTRAINT #{table_name}_pkey PRIMARY KEY(id);
-          ALTER TABLE topics ALTER COLUMN id SET DEFAULT next_id('#{table_name}_id_seq'::regclass, shard_id);
+          ALTER TABLE topics ALTER COLUMN id SET DEFAULT next_id('#{table_name}_id_seq'::regclass, #{shard_id});
       EOD
     end
 
